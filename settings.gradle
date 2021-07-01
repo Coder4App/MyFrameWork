@@ -1,0 +1,4 @@
+include ':algorithm'
+include ':component_base'
+include ':app'
+rootProject.name = "MyFrameWork"
