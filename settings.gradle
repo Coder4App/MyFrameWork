@@ -1,3 +1,4 @@
+include ':component_widget'
 include ':algorithm'
 include ':component_base'
 include ':app'

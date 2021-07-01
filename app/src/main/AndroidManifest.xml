@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyFrameWork">
+        android:theme="@style/Theme.MyFrameWork"
+        android:name=".MyApplication">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -19,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".testAct.XFermode.TestXFerModeAct" />
     </application>
 
 </manifest>
