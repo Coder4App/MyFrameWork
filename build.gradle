@@ -1,14 +1,22 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-apply from:'project_config.gradle'
+println("根build.gradle 开始配置")
+apply from: 'project_config.gradle'
+apply plugin: "com.dorongold.task-tree"
+apply plugin: "com.cw.plugin.taskTree"
+apply plugin: "com.cw.plugin.channelTag"
 buildscript {
     ext.kotlin_version = "1.4.32"
     repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url uri('/Users/chenwei/Desktop/localMaven') }
         google()
         jcenter()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "gradle.plugin.com.dorongold.plugins:task-tree:1.5"
+        classpath "com.cw.gradlePlugin:myPlugin:1.0.0"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -25,3 +33,4 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+println("根build.gradle 配置完成")

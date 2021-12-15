@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".testAct.XFermode.TestXFerModeAct" />
+        <activity android:name=".testAct.galleryRvAct.GalleryRvAct" />
     </application>
 
 </manifest>

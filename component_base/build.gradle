@@ -41,4 +41,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
 
     api rootProject.ext.libs["arouter-api"]
+    api rootProject.ext.libs["background-core"]
 }

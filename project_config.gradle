@@ -23,5 +23,8 @@ ext {
             "arouter-api":"com.alibaba:arouter-api:1.5.2",
             "arouter-compiler":"com.alibaba:arouter-compiler:1.5.2",
 
+            //三方库
+            "background-core":"com.noober.background:core:1.6.5",
+
     ]
 }

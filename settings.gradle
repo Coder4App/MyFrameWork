@@ -1,5 +1,64 @@
+import org.gradle.api.internal.GradleInternal
+import org.gradle.api.internal.StartParameterInternal
+import org.gradle.api.internal.initialization.ClassLoaderScope
+import org.gradle.groovy.scripts.ScriptSource
+import org.gradle.initialization.DefaultSettings
+import org.gradle.internal.service.scopes.ServiceRegistryFactory
+
+println("setting 开始配置")
+include ':plugin'
 include ':component_widget'
 include ':algorithm'
 include ':component_base'
 include ':app'
 rootProject.name = "MyFrameWork"
+println("setting 配置完成")
+
+
+println("........"  +this.getClass() + "/" + this.getClass().getSuperclass())
+
+gradle.addBuildListener(new BuildListener() {
+
+    @Override
+    void beforeSettings(Settings settings) {
+        super.beforeSettings(settings)
+        println('addBuildListener ----->'+settings)
+    }
+
+    @Override
+    void buildStarted(Gradle gradle) {
+
+    }
+
+    @Override
+    void settingsEvaluated(Settings settings) {
+
+    }
+
+    @Override
+    void projectsLoaded(Gradle gradle) {
+
+    }
+
+    @Override
+    void projectsEvaluated(Gradle gradle) {
+
+    }
+
+    @Override
+    void buildFinished(BuildResult buildResult) {
+
+    }
+})
+
+class test extends org.gradle.initialization.DefaultSettings{
+
+    test(ServiceRegistryFactory serviceRegistryFactory, GradleInternal gradle, ClassLoaderScope classLoaderScope, ClassLoaderScope baseClassLoaderScope, ScriptHandler settingsScriptHandler, File settingsDir, ScriptSource settingsScript, StartParameter startParameter) {
+        super(serviceRegistryFactory, gradle, classLoaderScope, baseClassLoaderScope, settingsScriptHandler, settingsDir, settingsScript, startParameter)
+    }
+
+    @Override
+    ExtensionContainer getExtensions() {
+        return null
+    }
+}

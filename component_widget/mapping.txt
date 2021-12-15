@@ -1,0 +1,533 @@
+# compiler: R8
+# compiler_version: 2.0.88
+# pg_map_id: b08d9ea
+# common_typos_disable
+com.cw.widget.FirstFragment -> com.cw.widget.FirstFragment:
+    android.widget.TextView tv -> a
+com.cw.widget.FirstFragment$onViewCreated$1 -> com.cw.widget.FirstFragment$a:
+    com.cw.widget.FirstFragment$onViewCreated$1 INSTANCE -> a
+com.nineoldandroids.animation.Animator -> com.nineoldandroids.animation.Animator:
+    java.util.ArrayList mListeners -> a
+    void addListener(com.nineoldandroids.animation.Animator$AnimatorListener) -> a
+    com.nineoldandroids.animation.Animator clone() -> a
+    java.util.ArrayList getListeners() -> b
+    void removeListener(com.nineoldandroids.animation.Animator$AnimatorListener) -> b
+    void start() -> c
+com.nineoldandroids.animation.Animator$AnimatorListener -> com.nineoldandroids.animation.Animator$AnimatorListener:
+    void onAnimationStart(com.nineoldandroids.animation.Animator) -> a
+    void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> b
+    void onAnimationEnd(com.nineoldandroids.animation.Animator) -> c
+    void onAnimationCancel(com.nineoldandroids.animation.Animator) -> d
+com.nineoldandroids.animation.AnimatorListenerAdapter -> com.nineoldandroids.animation.AnimatorListenerAdapter:
+    void onAnimationStart(com.nineoldandroids.animation.Animator) -> a
+    void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> b
+    void onAnimationEnd(com.nineoldandroids.animation.Animator) -> c
+    void onAnimationCancel(com.nineoldandroids.animation.Animator) -> d
+com.nineoldandroids.animation.AnimatorSet -> com.nineoldandroids.animation.AnimatorSet:
+    long mStartDelay -> j
+    boolean mStarted -> i
+    boolean mNeedsSort -> f
+    java.util.ArrayList mSortedNodes -> e
+    java.util.ArrayList mNodes -> d
+    com.nineoldandroids.animation.AnimatorSet$AnimatorSetListener mSetListener -> g
+    boolean mTerminated -> h
+    java.util.ArrayList mPlayingSet -> b
+    com.nineoldandroids.animation.ValueAnimator mDelayAnim -> k
+    java.util.HashMap mNodeMap -> c
+    java.util.ArrayList access$000(com.nineoldandroids.animation.AnimatorSet) -> a
+    boolean access$302(com.nineoldandroids.animation.AnimatorSet,boolean) -> a
+    com.nineoldandroids.animation.Animator clone() -> a
+    java.util.HashMap access$100(com.nineoldandroids.animation.AnimatorSet) -> b
+    java.util.ArrayList access$200(com.nineoldandroids.animation.AnimatorSet) -> c
+    void start() -> c
+    com.nineoldandroids.animation.AnimatorSet clone() -> d
+    void sortNodes() -> e
+com.nineoldandroids.animation.AnimatorSet$1 -> com.nineoldandroids.animation.AnimatorSet$1:
+    com.nineoldandroids.animation.AnimatorSet this$0 -> c
+    boolean canceled -> a
+    java.util.ArrayList val$nodesToStart -> b
+    void onAnimationEnd(com.nineoldandroids.animation.Animator) -> c
+    void onAnimationCancel(com.nineoldandroids.animation.Animator) -> d
+com.nineoldandroids.animation.AnimatorSet$AnimatorSetListener -> com.nineoldandroids.animation.AnimatorSet$AnimatorSetListener:
+    com.nineoldandroids.animation.AnimatorSet this$0 -> b
+    com.nineoldandroids.animation.AnimatorSet mAnimatorSet -> a
+    void onAnimationStart(com.nineoldandroids.animation.Animator) -> a
+    void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> b
+    void onAnimationEnd(com.nineoldandroids.animation.Animator) -> c
+    void onAnimationCancel(com.nineoldandroids.animation.Animator) -> d
+com.nineoldandroids.animation.AnimatorSet$Dependency -> com.nineoldandroids.animation.AnimatorSet$Dependency:
+    int rule -> b
+    com.nineoldandroids.animation.AnimatorSet$Node node -> a
+com.nineoldandroids.animation.AnimatorSet$DependencyListener -> com.nineoldandroids.animation.AnimatorSet$DependencyListener:
+    com.nineoldandroids.animation.AnimatorSet mAnimatorSet -> a
+    int mRule -> c
+    com.nineoldandroids.animation.AnimatorSet$Node mNode -> b
+    void onAnimationStart(com.nineoldandroids.animation.Animator) -> a
+    void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> b
+    void onAnimationEnd(com.nineoldandroids.animation.Animator) -> c
+    void onAnimationCancel(com.nineoldandroids.animation.Animator) -> d
+    void startIfReady(com.nineoldandroids.animation.Animator) -> e
+com.nineoldandroids.animation.AnimatorSet$Node -> com.nineoldandroids.animation.AnimatorSet$Node:
+    boolean done -> f
+    java.util.ArrayList nodeDependents -> e
+    com.nineoldandroids.animation.Animator animation -> a
+    java.util.ArrayList nodeDependencies -> d
+    java.util.ArrayList tmpDependencies -> c
+    java.util.ArrayList dependencies -> b
+    void addDependency(com.nineoldandroids.animation.AnimatorSet$Dependency) -> a
+    com.nineoldandroids.animation.AnimatorSet$Node clone() -> a
+com.nineoldandroids.animation.ArgbEvaluator -> com.nineoldandroids.animation.ArgbEvaluator:
+    java.lang.Object evaluate(float,java.lang.Object,java.lang.Object) -> a
+com.nineoldandroids.animation.FloatEvaluator -> com.nineoldandroids.animation.FloatEvaluator:
+    java.lang.Float evaluate(float,java.lang.Number,java.lang.Number) -> a
+    java.lang.Object evaluate(float,java.lang.Object,java.lang.Object) -> a
+com.nineoldandroids.animation.FloatKeyframeSet -> com.nineoldandroids.animation.FloatKeyframeSet:
+    float deltaValue -> i
+    float lastValue -> h
+    float firstValue -> g
+    boolean firstTime -> j
+    com.nineoldandroids.animation.KeyframeSet clone() -> a
+    java.lang.Object getValue(float) -> a
+    com.nineoldandroids.animation.FloatKeyframeSet clone() -> b
+    float getFloatValue(float) -> b
+com.nineoldandroids.animation.IntEvaluator -> com.nineoldandroids.animation.IntEvaluator:
+    java.lang.Integer evaluate(float,java.lang.Integer,java.lang.Integer) -> a
+    java.lang.Object evaluate(float,java.lang.Object,java.lang.Object) -> a
+com.nineoldandroids.animation.IntKeyframeSet -> com.nineoldandroids.animation.IntKeyframeSet:
+    boolean firstTime -> j
+    int lastValue -> h
+    int deltaValue -> i
+    int firstValue -> g
+    com.nineoldandroids.animation.KeyframeSet clone() -> a
+    java.lang.Object getValue(float) -> a
+    com.nineoldandroids.animation.IntKeyframeSet clone() -> b
+    int getIntValue(float) -> b
+com.nineoldandroids.animation.Keyframe -> com.nineoldandroids.animation.Keyframe:
+    android.view.animation.Interpolator mInterpolator -> b
+    float mFraction -> a
+    boolean mHasValue -> c
+    com.nineoldandroids.animation.Keyframe clone() -> a
+    com.nineoldandroids.animation.Keyframe ofFloat(float) -> a
+    com.nineoldandroids.animation.Keyframe ofFloat(float,float) -> a
+    void setInterpolator(android.view.animation.Interpolator) -> a
+    void setValue(java.lang.Object) -> a
+    float getFraction() -> b
+    android.view.animation.Interpolator getInterpolator() -> c
+    java.lang.Object getValue() -> d
+    boolean hasValue() -> e
+com.nineoldandroids.animation.Keyframe$FloatKeyframe -> com.nineoldandroids.animation.Keyframe$FloatKeyframe:
+    float mValue -> d
+    com.nineoldandroids.animation.Keyframe clone() -> a
+    void setValue(java.lang.Object) -> a
+    java.lang.Object getValue() -> d
+    com.nineoldandroids.animation.Keyframe$FloatKeyframe clone() -> f
+    float getFloatValue() -> g
+com.nineoldandroids.animation.Keyframe$IntKeyframe -> com.nineoldandroids.animation.Keyframe$IntKeyframe:
+    int mValue -> d
+    com.nineoldandroids.animation.Keyframe clone() -> a
+    void setValue(java.lang.Object) -> a
+    java.lang.Object getValue() -> d
+    com.nineoldandroids.animation.Keyframe$IntKeyframe clone() -> f
+    int getIntValue() -> g
+com.nineoldandroids.animation.Keyframe$ObjectKeyframe -> com.nineoldandroids.animation.Keyframe$ObjectKeyframe:
+    java.lang.Object mValue -> d
+    com.nineoldandroids.animation.Keyframe clone() -> a
+    void setValue(java.lang.Object) -> a
+    java.lang.Object getValue() -> d
+    com.nineoldandroids.animation.Keyframe$ObjectKeyframe clone() -> f
+com.nineoldandroids.animation.KeyframeSet -> com.nineoldandroids.animation.KeyframeSet:
+    com.nineoldandroids.animation.Keyframe mFirstKeyframe -> b
+    com.nineoldandroids.animation.Keyframe mLastKeyframe -> c
+    android.view.animation.Interpolator mInterpolator -> d
+    java.util.ArrayList mKeyframes -> e
+    com.nineoldandroids.animation.TypeEvaluator mEvaluator -> f
+    int mNumKeyframes -> a
+    com.nineoldandroids.animation.KeyframeSet clone() -> a
+    java.lang.Object getValue(float) -> a
+    com.nineoldandroids.animation.KeyframeSet ofFloat(float[]) -> a
+    void setEvaluator(com.nineoldandroids.animation.TypeEvaluator) -> a
+com.nineoldandroids.animation.ObjectAnimator -> com.nineoldandroids.animation.ObjectAnimator:
+    java.lang.Object mTarget -> B
+    java.util.Map PROXY_PROPERTIES -> E
+    java.lang.String mPropertyName -> C
+    com.nineoldandroids.util.Property mProperty -> D
+    void animateValue(float) -> a
+    com.nineoldandroids.animation.Animator clone() -> a
+    void setProperty(com.nineoldandroids.util.Property) -> a
+    void setFloatValues(float[]) -> b
+    void start() -> c
+    com.nineoldandroids.animation.ValueAnimator setDuration(long) -> d
+    com.nineoldandroids.animation.ObjectAnimator setDuration(long) -> f
+    com.nineoldandroids.animation.ValueAnimator clone() -> j
+    void initAnimation() -> n
+    com.nineoldandroids.animation.ObjectAnimator clone() -> p
+com.nineoldandroids.animation.PreHoneycombCompat -> com.nineoldandroids.animation.PreHoneycombCompat:
+    com.nineoldandroids.util.Property ROTATION_Y -> h
+    com.nineoldandroids.util.Property SCALE_X -> i
+    com.nineoldandroids.util.Property SCALE_Y -> j
+    com.nineoldandroids.util.Property SCROLL_X -> k
+    com.nineoldandroids.util.Property SCROLL_Y -> l
+    com.nineoldandroids.util.Property X -> m
+    com.nineoldandroids.util.Property Y -> n
+    com.nineoldandroids.util.Property ALPHA -> a
+    com.nineoldandroids.util.Property PIVOT_X -> b
+    com.nineoldandroids.util.Property PIVOT_Y -> c
+    com.nineoldandroids.util.Property TRANSLATION_X -> d
+    com.nineoldandroids.util.Property TRANSLATION_Y -> e
+    com.nineoldandroids.util.Property ROTATION -> f
+    com.nineoldandroids.util.Property ROTATION_X -> g
+com.nineoldandroids.animation.PreHoneycombCompat$1 -> com.nineoldandroids.animation.PreHoneycombCompat$1:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$10 -> com.nineoldandroids.animation.PreHoneycombCompat$10:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$11 -> com.nineoldandroids.animation.PreHoneycombCompat$11:
+    java.lang.Integer get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,int) -> a
+    void setValue(java.lang.Object,int) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$12 -> com.nineoldandroids.animation.PreHoneycombCompat$12:
+    java.lang.Integer get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,int) -> a
+    void setValue(java.lang.Object,int) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$13 -> com.nineoldandroids.animation.PreHoneycombCompat$13:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$14 -> com.nineoldandroids.animation.PreHoneycombCompat$14:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$2 -> com.nineoldandroids.animation.PreHoneycombCompat$2:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$3 -> com.nineoldandroids.animation.PreHoneycombCompat$3:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$4 -> com.nineoldandroids.animation.PreHoneycombCompat$4:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$5 -> com.nineoldandroids.animation.PreHoneycombCompat$5:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$6 -> com.nineoldandroids.animation.PreHoneycombCompat$6:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$7 -> com.nineoldandroids.animation.PreHoneycombCompat$7:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$8 -> com.nineoldandroids.animation.PreHoneycombCompat$8:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PreHoneycombCompat$9 -> com.nineoldandroids.animation.PreHoneycombCompat$9:
+    java.lang.Float get(android.view.View) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    void setValue(android.view.View,float) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.animation.PropertyValuesHolder -> com.nineoldandroids.animation.PropertyValuesHolder:
+    java.lang.Object mAnimatedValue -> j
+    java.lang.Class mValueType -> e
+    java.lang.Class[] DOUBLE_VARIANTS -> o
+    com.nineoldandroids.animation.TypeEvaluator sFloatEvaluator -> l
+    com.nineoldandroids.animation.TypeEvaluator sIntEvaluator -> k
+    com.nineoldandroids.animation.KeyframeSet mKeyframeSet -> f
+    java.lang.Class[] FLOAT_VARIANTS -> m
+    java.lang.Class[] INTEGER_VARIANTS -> n
+    java.util.concurrent.locks.ReentrantReadWriteLock mPropertyMapLock -> g
+    java.lang.reflect.Method mSetter -> c
+    com.nineoldandroids.animation.TypeEvaluator mEvaluator -> i
+    java.util.HashMap sGetterPropertyMap -> q
+    java.lang.reflect.Method mGetter -> d
+    java.util.HashMap sSetterPropertyMap -> p
+    java.lang.String mPropertyName -> a
+    com.nineoldandroids.util.Property mProperty -> b
+    java.lang.Object[] mTmpValueArray -> h
+    void calculateValue(float) -> a
+    com.nineoldandroids.animation.PropertyValuesHolder clone() -> a
+    java.lang.String getMethodName(java.lang.String,java.lang.String) -> a
+    java.lang.reflect.Method getPropertyFunction(java.lang.Class,java.lang.String,java.lang.Class) -> a
+    com.nineoldandroids.animation.PropertyValuesHolder ofFloat(com.nineoldandroids.util.Property,float[]) -> a
+    com.nineoldandroids.animation.PropertyValuesHolder ofFloat(java.lang.String,float[]) -> a
+    void setAnimatedValue(java.lang.Object) -> a
+    void setFloatValues(float[]) -> a
+    void setProperty(com.nineoldandroids.util.Property) -> a
+    void setupGetter(java.lang.Class) -> a
+    java.lang.reflect.Method setupSetterOrGetter(java.lang.Class,java.util.HashMap,java.lang.String,java.lang.Class) -> a
+    java.lang.Object getAnimatedValue() -> b
+    void setupSetter(java.lang.Class) -> b
+    void setupSetterAndGetter(java.lang.Object) -> b
+    java.lang.String getPropertyName() -> c
+    void init() -> d
+com.nineoldandroids.animation.PropertyValuesHolder$FloatPropertyValuesHolder -> com.nineoldandroids.animation.PropertyValuesHolder$FloatPropertyValuesHolder:
+    com.nineoldandroids.animation.FloatKeyframeSet mFloatKeyframeSet -> s
+    float mFloatAnimatedValue -> t
+    com.nineoldandroids.util.FloatProperty mFloatProperty -> r
+    void calculateValue(float) -> a
+    com.nineoldandroids.animation.PropertyValuesHolder clone() -> a
+    void setAnimatedValue(java.lang.Object) -> a
+    void setFloatValues(float[]) -> a
+    java.lang.Object getAnimatedValue() -> b
+    void setupSetter(java.lang.Class) -> b
+    com.nineoldandroids.animation.PropertyValuesHolder$FloatPropertyValuesHolder clone() -> e
+com.nineoldandroids.animation.PropertyValuesHolder$IntPropertyValuesHolder -> com.nineoldandroids.animation.PropertyValuesHolder$IntPropertyValuesHolder:
+    com.nineoldandroids.animation.IntKeyframeSet mIntKeyframeSet -> s
+    int mIntAnimatedValue -> t
+    com.nineoldandroids.util.IntProperty mIntProperty -> r
+    void calculateValue(float) -> a
+    com.nineoldandroids.animation.PropertyValuesHolder clone() -> a
+    void setAnimatedValue(java.lang.Object) -> a
+    java.lang.Object getAnimatedValue() -> b
+    void setupSetter(java.lang.Class) -> b
+    com.nineoldandroids.animation.PropertyValuesHolder$IntPropertyValuesHolder clone() -> e
+com.nineoldandroids.animation.TimeAnimator -> com.nineoldandroids.animation.TimeAnimator:
+    com.nineoldandroids.animation.TimeAnimator$TimeListener mListener -> B
+    long mPreviousTime -> C
+    void animateValue(float) -> a
+    boolean animationFrame(long) -> a
+    void initAnimation() -> n
+com.nineoldandroids.animation.TimeAnimator$TimeListener -> com.nineoldandroids.animation.TimeAnimator$TimeListener:
+    void onTimeUpdate(com.nineoldandroids.animation.TimeAnimator,long,long) -> a
+com.nineoldandroids.animation.TypeEvaluator -> com.nineoldandroids.animation.TypeEvaluator:
+    java.lang.Object evaluate(float,java.lang.Object,java.lang.Object) -> a
+com.nineoldandroids.animation.ValueAnimator -> com.nineoldandroids.animation.ValueAnimator:
+    int mRepeatCount -> n
+    com.nineoldandroids.animation.PropertyValuesHolder[] mValues -> r
+    boolean mInitialized -> k
+    long mSeekTime -> c
+    android.view.animation.Interpolator mInterpolator -> p
+    java.lang.ThreadLocal sAnimations -> u
+    java.lang.ThreadLocal sDelayedAnims -> w
+    java.lang.ThreadLocal sReadyAnims -> y
+    long mStartDelay -> m
+    java.util.ArrayList mUpdateListeners -> q
+    android.view.animation.Interpolator sDefaultInterpolator -> z
+    boolean mPlayingBackwards -> d
+    int mRepeatMode -> o
+    long mDuration -> l
+    boolean mRunning -> j
+    float mCurrentFraction -> f
+    long mDelayStartTime -> h
+    int mPlayingState -> i
+    long mStartTime -> b
+    long sFrameDelay -> A
+    int mCurrentIteration -> e
+    java.lang.ThreadLocal sAnimationHandler -> t
+    java.lang.ThreadLocal sPendingAnimations -> v
+    java.lang.ThreadLocal sEndingAnims -> x
+    boolean mStartedDelay -> g
+    java.util.HashMap mValuesMap -> s
+    long access$300(com.nineoldandroids.animation.ValueAnimator) -> a
+    boolean access$700(com.nineoldandroids.animation.ValueAnimator,long) -> a
+    boolean access$802(com.nineoldandroids.animation.ValueAnimator,boolean) -> a
+    void addUpdateListener(com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener) -> a
+    void animateValue(float) -> a
+    boolean animationFrame(long) -> a
+    com.nineoldandroids.animation.Animator clone() -> a
+    com.nineoldandroids.animation.ValueAnimator ofFloat(float[]) -> a
+    void setInterpolator(android.view.animation.Interpolator) -> a
+    void setValues(com.nineoldandroids.animation.PropertyValuesHolder[]) -> a
+    void start(boolean) -> a
+    void access$400(com.nineoldandroids.animation.ValueAnimator) -> b
+    boolean delayedAnimationFrame(long) -> b
+    void setFloatValues(float[]) -> b
+    void access$900(com.nineoldandroids.animation.ValueAnimator) -> c
+    void setCurrentPlayTime(long) -> c
+    void start() -> c
+    java.lang.ThreadLocal access$000() -> d
+    com.nineoldandroids.animation.ValueAnimator setDuration(long) -> d
+    java.lang.ThreadLocal access$100() -> e
+    void setStartDelay(long) -> e
+    long access$1000() -> f
+    java.lang.ThreadLocal access$200() -> g
+    java.lang.ThreadLocal access$500() -> h
+    java.lang.ThreadLocal access$600() -> i
+    com.nineoldandroids.animation.ValueAnimator clone() -> j
+    void endAnimation() -> k
+    float getAnimatedFraction() -> l
+    long getCurrentPlayTime() -> m
+    void initAnimation() -> n
+    void startAnimation() -> o
+com.nineoldandroids.animation.ValueAnimator$1 -> com.nineoldandroids.animation.ValueAnimator$1:
+    java.util.ArrayList initialValue() -> a
+com.nineoldandroids.animation.ValueAnimator$2 -> com.nineoldandroids.animation.ValueAnimator$2:
+    java.util.ArrayList initialValue() -> a
+com.nineoldandroids.animation.ValueAnimator$3 -> com.nineoldandroids.animation.ValueAnimator$3:
+    java.util.ArrayList initialValue() -> a
+com.nineoldandroids.animation.ValueAnimator$4 -> com.nineoldandroids.animation.ValueAnimator$4:
+    java.util.ArrayList initialValue() -> a
+com.nineoldandroids.animation.ValueAnimator$5 -> com.nineoldandroids.animation.ValueAnimator$5:
+    java.util.ArrayList initialValue() -> a
+com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener -> com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener:
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> a
+com.nineoldandroids.util.FloatProperty -> com.nineoldandroids.util.FloatProperty:
+    void set(java.lang.Object,java.lang.Float) -> a
+    void set(java.lang.Object,java.lang.Object) -> a
+    void setValue(java.lang.Object,float) -> a
+com.nineoldandroids.util.IntProperty -> com.nineoldandroids.util.IntProperty:
+    void set(java.lang.Object,java.lang.Integer) -> a
+    void set(java.lang.Object,java.lang.Object) -> a
+    void setValue(java.lang.Object,int) -> a
+com.nineoldandroids.util.Property -> com.nineoldandroids.util.Property:
+    java.lang.String mName -> a
+    java.lang.Object get(java.lang.Object) -> a
+    java.lang.String getName() -> a
+    void set(java.lang.Object,java.lang.Object) -> a
+com.nineoldandroids.util.ReflectiveProperty -> com.nineoldandroids.util.ReflectiveProperty:
+    java.lang.reflect.Method mGetter -> c
+    java.lang.reflect.Field mField -> d
+    java.lang.reflect.Method mSetter -> b
+    java.lang.Object get(java.lang.Object) -> a
+    void set(java.lang.Object,java.lang.Object) -> a
+com.nineoldandroids.view.ViewHelper -> com.nineoldandroids.view.ViewHelper:
+    void setAlpha(android.view.View,float) -> a
+com.nineoldandroids.view.ViewHelper$Honeycomb -> com.nineoldandroids.view.ViewHelper$Honeycomb:
+    void setAlpha(android.view.View,float) -> a
+com.nineoldandroids.view.ViewPropertyAnimatorHC -> com.nineoldandroids.view.ViewPropertyAnimatorHC:
+    com.nineoldandroids.animation.Animator$AnimatorListener mListener -> h
+    java.util.ArrayList mPendingAnimations -> j
+    java.util.HashMap mAnimatorMap -> k
+    long mDuration -> b
+    boolean mStartDelaySet -> e
+    com.nineoldandroids.view.ViewPropertyAnimatorHC$AnimatorEventListener mAnimatorEventListener -> i
+    long mStartDelay -> d
+    boolean mInterpolatorSet -> g
+    java.lang.ref.WeakReference mView -> a
+    android.view.animation.Interpolator mInterpolator -> f
+    boolean mDurationSet -> c
+    void access$100(com.nineoldandroids.view.ViewPropertyAnimatorHC) -> a
+    com.nineoldandroids.animation.Animator$AnimatorListener access$202(com.nineoldandroids.view.ViewPropertyAnimatorHC,com.nineoldandroids.animation.Animator$AnimatorListener) -> a
+    void access$500(com.nineoldandroids.view.ViewPropertyAnimatorHC,int,float) -> a
+    void setValue(int,float) -> a
+    void startAnimation() -> a
+    com.nineoldandroids.animation.Animator$AnimatorListener access$200(com.nineoldandroids.view.ViewPropertyAnimatorHC) -> b
+    java.util.HashMap access$300(com.nineoldandroids.view.ViewPropertyAnimatorHC) -> c
+    java.lang.ref.WeakReference access$400(com.nineoldandroids.view.ViewPropertyAnimatorHC) -> d
+com.nineoldandroids.view.ViewPropertyAnimatorHC$1 -> com.nineoldandroids.view.ViewPropertyAnimatorHC$1:
+    com.nineoldandroids.view.ViewPropertyAnimatorHC this$0 -> a
+com.nineoldandroids.view.ViewPropertyAnimatorHC$AnimatorEventListener -> com.nineoldandroids.view.ViewPropertyAnimatorHC$AnimatorEventListener:
+    com.nineoldandroids.view.ViewPropertyAnimatorHC this$0 -> a
+    void onAnimationStart(com.nineoldandroids.animation.Animator) -> a
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> a
+    void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> b
+    void onAnimationEnd(com.nineoldandroids.animation.Animator) -> c
+    void onAnimationCancel(com.nineoldandroids.animation.Animator) -> d
+com.nineoldandroids.view.ViewPropertyAnimatorHC$NameValuesHolder -> com.nineoldandroids.view.ViewPropertyAnimatorHC$NameValuesHolder:
+    float mDeltaValue -> c
+    float mFromValue -> b
+    int mNameConstant -> a
+com.nineoldandroids.view.ViewPropertyAnimatorHC$PropertyBundle -> com.nineoldandroids.view.ViewPropertyAnimatorHC$PropertyBundle:
+    java.util.ArrayList mNameValuesHolder -> b
+    int mPropertyMask -> a
+com.nineoldandroids.view.ViewPropertyAnimatorICS$1 -> com.nineoldandroids.view.ViewPropertyAnimatorICS$1:
+    com.nineoldandroids.animation.Animator$AnimatorListener val$listener -> a
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC -> com.nineoldandroids.view.ViewPropertyAnimatorPreHC:
+    com.nineoldandroids.view.ViewPropertyAnimatorPreHC$AnimatorEventListener mAnimatorEventListener -> j
+    java.util.ArrayList mPendingAnimations -> k
+    long mStartDelay -> e
+    com.nineoldandroids.animation.Animator$AnimatorListener mListener -> i
+    java.util.HashMap mAnimatorMap -> l
+    boolean mStartDelaySet -> f
+    java.lang.ref.WeakReference mView -> b
+    android.view.animation.Interpolator mInterpolator -> g
+    long mDuration -> c
+    boolean mInterpolatorSet -> h
+    com.nineoldandroids.view.animation.AnimatorProxy mProxy -> a
+    boolean mDurationSet -> d
+    void access$100(com.nineoldandroids.view.ViewPropertyAnimatorPreHC) -> a
+    com.nineoldandroids.animation.Animator$AnimatorListener access$202(com.nineoldandroids.view.ViewPropertyAnimatorPreHC,com.nineoldandroids.animation.Animator$AnimatorListener) -> a
+    void access$500(com.nineoldandroids.view.ViewPropertyAnimatorPreHC,int,float) -> a
+    void setValue(int,float) -> a
+    void startAnimation() -> a
+    com.nineoldandroids.animation.Animator$AnimatorListener access$200(com.nineoldandroids.view.ViewPropertyAnimatorPreHC) -> b
+    java.util.HashMap access$300(com.nineoldandroids.view.ViewPropertyAnimatorPreHC) -> c
+    java.lang.ref.WeakReference access$400(com.nineoldandroids.view.ViewPropertyAnimatorPreHC) -> d
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC$1 -> com.nineoldandroids.view.ViewPropertyAnimatorPreHC$1:
+    com.nineoldandroids.view.ViewPropertyAnimatorPreHC this$0 -> a
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC$AnimatorEventListener -> com.nineoldandroids.view.ViewPropertyAnimatorPreHC$AnimatorEventListener:
+    com.nineoldandroids.view.ViewPropertyAnimatorPreHC this$0 -> a
+    void onAnimationStart(com.nineoldandroids.animation.Animator) -> a
+    void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator) -> a
+    void onAnimationRepeat(com.nineoldandroids.animation.Animator) -> b
+    void onAnimationEnd(com.nineoldandroids.animation.Animator) -> c
+    void onAnimationCancel(com.nineoldandroids.animation.Animator) -> d
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC$NameValuesHolder -> com.nineoldandroids.view.ViewPropertyAnimatorPreHC$NameValuesHolder:
+    float mDeltaValue -> c
+    float mFromValue -> b
+    int mNameConstant -> a
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC$PropertyBundle -> com.nineoldandroids.view.ViewPropertyAnimatorPreHC$PropertyBundle:
+    java.util.ArrayList mNameValuesHolder -> b
+    int mPropertyMask -> a
+com.nineoldandroids.view.animation.AnimatorProxy -> com.nineoldandroids.view.animation.AnimatorProxy:
+    float mTranslationX -> l
+    android.graphics.Camera mCamera -> b
+    float mScaleY -> k
+    float mScaleX -> j
+    float mRotationZ -> i
+    float mRotationY -> h
+    float mRotationX -> g
+    float mPivotY -> f
+    float mPivotX -> e
+    float mAlpha -> d
+    boolean NEEDS_PROXY -> q
+    java.util.WeakHashMap PROXIES -> r
+    android.graphics.RectF mBefore -> n
+    android.graphics.Matrix mTempMatrix -> p
+    android.graphics.RectF mAfter -> o
+    java.lang.ref.WeakReference mView -> a
+    boolean mHasPivot -> c
+    float mTranslationY -> m
+    void computeRect(android.graphics.RectF,android.view.View) -> a
+    float getAlpha() -> a
+    void setAlpha(float) -> a
+    void setScrollX(int) -> a
+    void transformMatrix(android.graphics.Matrix,android.view.View) -> a
+    com.nineoldandroids.view.animation.AnimatorProxy wrap(android.view.View) -> a
+    float getPivotX() -> b
+    void setPivotX(float) -> b
+    void setScrollY(int) -> b
+    float getPivotY() -> c
+    void setPivotY(float) -> c
+    float getRotation() -> d
+    void setRotation(float) -> d
+    float getRotationX() -> e
+    void setRotationX(float) -> e
+    float getRotationY() -> f
+    void setRotationY(float) -> f
+    float getScaleX() -> g
+    void setScaleX(float) -> g
+    float getScaleY() -> h
+    void setScaleY(float) -> h
+    int getScrollX() -> i
+    void setTranslationX(float) -> i
+    int getScrollY() -> j
+    void setTranslationY(float) -> j
+    float getTranslationX() -> k
+    void setX(float) -> k
+    float getTranslationY() -> l
+    void setY(float) -> l
+    float getX() -> m
+    float getY() -> n
+    void invalidateAfterUpdate() -> o
+    void prepareForUpdate() -> p

@@ -1,0 +1,49 @@
+plugins {
+    id 'java-library'
+    id 'java-gradle-plugin'
+    id 'groovy'
+    id 'maven'
+    id 'kotlin'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    implementation "com.android.tools.build:gradle:4.0.1"
+}
+
+gradlePlugin{
+    plugins{
+        domainContainer{
+            id = "com.cw.plugin.domainContainer"
+            implementationClass = "com.cw.plugins.DomainContainer"
+        }
+
+        taskTree{
+            id = "com.cw.plugin.taskTree"
+            implementationClass = "com.cw.plugins.taskTree.TaskTreePlugin"
+        }
+
+        channelTag{
+            id = "com.cw.plugin.channelTag"
+            implementationClass = "com.cw.plugins.channelTag.ChannelTagPlugin"
+        }
+    }
+}
+
+
+//group = "com.cw.gradlePlugin"
+//version = "1.0.0"
+
+//打包上传
+uploadArchives{
+    repositories.mavenDeployer{
+        repository(url:uri('/Users/chenwei/Desktop/localMaven'))
+        pom.groupId = "com.cw.gradlePlugin"
+        pom.artifactId = "myPlugin"
+        pom.version = "1.0.0"
+    }
+}

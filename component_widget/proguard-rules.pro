@@ -19,3 +19,43 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+-optimizationpasses 5           # 指定代码的压缩级别
+-dontusemixedcaseclassnames     # 是否使用大小写混合
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+-dontpreverify  # 混淆时是否做预校验
+-verbose        # 混淆时是否记录日志
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/* # 混淆时所采用的算法
+#-ignorewarnings #忽略警告
+# mapping.txt文件列出混淆前后的映射
+-printmapping mapping.txt
+-dontoptimize
+
+-keep  class com.cw.widget.galleryRv.TestClassA{*;}
+-keep  class com.cw.widget.galleryRv.TestClassB{*;}
+-keep  class com.nineoldandroids.**
+#-keepclasseswithmembernames  public class com.cw.widget.galleryRv.TestClassA{*;}
+
+-keeppackagenames  com.cw.widget.galleryRv
+
+# 保持哪些类和方法不被混淆
+-keep public class * extends android.app.Fragment
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class * extends android.support.v4.**
+
+#Android X
+-keep class com.google.android.material.** {*;}
+-keep class androidx.** {*;}
+-keep public class * extends androidx.**
+-keep interface androidx.** {*;}
+-dontwarn com.google.android.material.**
+-dontnote com.google.android.material.**
+-dontwarn androidx.**

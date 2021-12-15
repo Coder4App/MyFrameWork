@@ -4,11 +4,9 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
 }
-
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
-
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.cw.myframework"
         minSdkVersion 21
@@ -23,20 +21,38 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
+
+        println("0000------>$it")
     }
 
     buildTypes {
+        println("1111------>$it")
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions("version")
+    productFlavors {
+        demo {
+            dimension "version"
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+        }
+    }
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }
 
@@ -57,3 +73,4 @@ dependencies {
     implementation project(':component_widget')
     implementation project(':component_base')
 }
+println("--->" + this+ "/" +this.getClass() + "/" + this.getClass().getSuperclass())
