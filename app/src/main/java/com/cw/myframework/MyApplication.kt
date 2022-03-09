@@ -20,8 +20,8 @@ class MyApplication:Application() {
 
     private fun initARouter() {
         if (BuildConfig.DEBUG) {
-            ARouter.openLog();
-            ARouter.openDebug();
+            ARouter.openLog()
+            ARouter.openDebug()
         }
         ARouter.init(this)
     }

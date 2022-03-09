@@ -31,6 +31,12 @@ gradlePlugin{
             id = "com.cw.plugin.channelTag"
             implementationClass = "com.cw.plugins.channelTag.ChannelTagPlugin"
         }
+
+
+        privacyComplianceScan{
+            id = "com.cw.plugin.privacyComplianceScan"
+            implementationClass = "com.cw.plugins.privacyComplianceScan.PrivacyComplianceScanPlugin"
+        }
     }
 }
 
@@ -44,6 +50,6 @@ uploadArchives{
         repository(url:uri('/Users/chenwei/Desktop/localMaven'))
         pom.groupId = "com.cw.gradlePlugin"
         pom.artifactId = "myPlugin"
-        pom.version = "1.0.0"
+        pom.version = "1.0.45"
     }
 }

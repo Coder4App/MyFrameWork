@@ -22,6 +22,16 @@
         </activity>
         <activity android:name=".testAct.XFermode.TestXFerModeAct" />
         <activity android:name=".testAct.galleryRvAct.GalleryRvAct" />
+
+
+        <!-- flutter页面承载的Activity -->
+        <activity
+            android:name="io.flutter.embedding.android.FlutterActivity"
+            android:theme="@style/Theme.MyFrameWork.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize"
+            />
     </application>
 
 </manifest>

@@ -3,14 +3,15 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
+    id 'com.cw.plugin.privacyComplianceScan'
 }
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
         applicationId "com.cw.myframework"
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion  rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -22,11 +23,13 @@ android {
             }
         }
 
-        println("0000------>$it")
+        compileOptions {
+            sourceCompatibility 1.8
+            targetCompatibility 1.8
+        }
     }
 
     buildTypes {
-        println("1111------>$it")
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -56,8 +59,14 @@ android {
     }
 }
 
-dependencies {
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -72,5 +81,6 @@ dependencies {
     kapt rootProject.ext.libs["arouter-compiler"]
     implementation project(':component_widget')
     implementation project(':component_base')
+
+    implementation 'com.pangle.cn:ads-sdk-pro:4.3.0.1'
 }
-println("--->" + this+ "/" +this.getClass() + "/" + this.getClass().getSuperclass())
