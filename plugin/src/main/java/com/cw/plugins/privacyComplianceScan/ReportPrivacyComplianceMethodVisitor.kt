@@ -42,28 +42,10 @@ class ReportPrivacyComplianceMethodVisitor(
 
         if (needInsert(owner, name)) {
             PrivacyComplianceScanUtil.printStep("插入 $className / $name")
-//            val label2 = Label()
-//            mv.visitLabel(label2)
-//            mv.visitLineNumber(44, label2)
-//            mv.visitFieldInsn(
-//                GETSTATIC,
-//                "com/cw/myframework/testAct/PrivacyComplianceScanUtil",
-//                "INSTANCE",
-//                "Lcom/cw/myframework/testAct/PrivacyComplianceScanUtil;"
-//            )
-//            mv.visitLdcInsn(name)
-//            mv.visitMethodInsn(
-//                INVOKEVIRTUAL,
-//                "com/cw/myframework/testAct/Pjava/lang/RuntimerivacyComplianceScanUtil",
-//                "printPermissionNameLog",
-//                "(Ljava/lang/String;)V",
-//                false
-//            )
 
-
-            val label5 = Label()
-            mv.visitLabel(label5)
-            mv.visitLineNumber(50, label5)
+            val label = Label()
+            mv.visitLabel(label)
+            mv.visitLineNumber(50, label)
             mv.visitLdcInsn("------------>")
             mv.visitLdcInsn("$className $name")
             mv.visitMethodInsn(

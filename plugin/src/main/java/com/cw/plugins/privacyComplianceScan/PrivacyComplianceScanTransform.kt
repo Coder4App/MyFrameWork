@@ -136,6 +136,7 @@ class PrivacyComplianceScanTransform : Transform() {
                 var itemJarName = item.name
                 PrivacyComplianceScanUtil.printJarStep("itemJarName", itemJarName)
                 val itemMd5name = DigestUtils.md5Hex(item.file.absolutePath)
+                //
                 if (itemJarName.endsWith(".jar")) {
                     itemJarName = itemJarName.substring(0, itemJarName.length - 4)
                 }
@@ -154,13 +155,13 @@ class PrivacyComplianceScanTransform : Transform() {
 
                 //遍历jar下面的所有class文件，这里不用考虑当前item是否是Directory的问题
                 while (enumeration.hasMoreElements()) {
-                    val jarEntry = enumeration.nextElement()
-                    val jarEntryName = jarEntry.name
-                    PrivacyComplianceScanUtil.printJarEntryName(jarEntryName)
+                    val jarItemEntry = enumeration.nextElement()
+                    val jarItemEntryName = jarItemEntry.name
+                    PrivacyComplianceScanUtil.printJarEntryName(jarItemEntryName)
 
-                    val zipEntry = ZipEntry(jarEntryName)
-                    val inputStream = jarFile.getInputStream(jarEntry)
-                    if (needDeal(jarEntryName)) {
+                    val zipEntry = ZipEntry(jarItemEntryName)
+                    val inputStream = jarFile.getInputStream(jarItemEntry)
+                    if (needDeal(jarItemEntryName)) {
                         //
                         jarOutputStream.putNextEntry(zipEntry)
                         val cr = ClassReader(IOUtils.toByteArray(inputStream))

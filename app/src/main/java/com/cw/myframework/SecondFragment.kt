@@ -57,6 +57,20 @@ class SecondFragment : Fragment() {
         }
     }
 
+    private fun test(app: Application) {
+        try {
+            val list =
+                app.packageManager.getInstalledApplications(PackageManager.MATCH_UNINSTALLED_PACKAGES)
+            val sb = StringBuilder()
+            for (info in list) {
+                if (!isSystemApp(info)) {
+                    sb.append(info.packageName).append(",")
+                }
+            }
+        } catch (e: Exception) {
+        }
+    }
+
     private fun isSystemApp(info: ApplicationInfo): Boolean {
         val isSysApp = info.flags and ApplicationInfo.FLAG_SYSTEM == 1
         val isSysUpd = info.flags and ApplicationInfo.FLAG_UPDATED_SYSTEM_APP == 1

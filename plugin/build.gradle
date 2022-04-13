@@ -50,6 +50,6 @@ uploadArchives{
         repository(url:uri('/Users/chenwei/Desktop/localMaven'))
         pom.groupId = "com.cw.gradlePlugin"
         pom.artifactId = "myPlugin"
-        pom.version = "1.0.45"
+        pom.version = "1.0.49"
     }
 }

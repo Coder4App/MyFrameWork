@@ -41,10 +41,10 @@ object PrivacyComplianceScanUtil {
     }
 
     fun printJarStep(name: String, describe: String) {
-//        println("PrivacyComplianceScanUtil  $name  $describe")
+        println("PrivacyComplianceScanUtil  $name  $describe")
     }
 
     fun printJarEntryName(entryName:String) {
-//        println("PrivacyComplianceScanUtil          $entryName")
+        println("PrivacyComplianceScanUtil                      $entryName")
     }
 }
