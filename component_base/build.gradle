@@ -40,19 +40,26 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
 
+    api rootProject.ext.libs["lifecycle-runtime"]
+    api rootProject.ext.libs["lifecycle-livedata-ktx"]
+    api rootProject.ext.libs["lifecycle-viewmodel-ktx"]
+//    api rootProject.ext.libs["kotlinx-coroutines"]
+
     //引入ARouter路由框架
     api rootProject.ext.libs["arouter-api"]
     api rootProject.ext.libs["background-core"]
 
+    api rootProject.ext.libs["zxing"]
+
     //flutter源码依赖配置
-    if (rootProject.ext.flutterLocal){
-        //依赖本地代码
-        api project(':flutter')
-    }else {
-        //依赖aar
-        debugApi 'com.cw.my_flutter_module:flutter_debug:1.0'
-//        profileApi 'com.cw.my_flutter_module:flutter_profile:1.0'
-        releaseApi 'com.cw.my_flutter_module:flutter_release:1.0'
-    }
+//    if (rootProject.ext.flutterLocal){
+//        //依赖本地代码
+//        api project(':flutter')
+//    }else {
+//        //依赖aar
+//        debugApi 'com.cw.my_flutter_module:flutter_debug:1.0'
+////        profileApi 'com.cw.my_flutter_module:flutter_profile:1.0'
+//        releaseApi 'com.cw.my_flutter_module:flutter_release:1.0'
+//    }
 
 }

@@ -3,7 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
-    id 'com.cw.plugin.privacyComplianceScan'
+//    id 'com.cw.plugin.privacyComplianceScan'
 }
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -82,5 +82,9 @@ dependencies {
     implementation project(':component_widget')
     implementation project(':component_base')
 
-    implementation 'com.pangle.cn:ads-sdk-pro:4.3.0.1'
+    implementation rootProject.ext.libs["Okhttp3"]
+    implementation rootProject.ext.libs["Retrofit"]
+    implementation rootProject.ext.libs["converter-gson"]
+    implementation rootProject.ext.libs["adapter-rxjava2"]
+    implementation rootProject.ext.libs["Glide"]
 }

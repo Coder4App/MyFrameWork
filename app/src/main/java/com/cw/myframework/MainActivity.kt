@@ -1,16 +1,31 @@
 package com.cw.myframework
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.alibaba.android.arouter.launcher.ARouter
-import com.bytedance.sdk.openadsdk.TTAdConfig
-import com.bytedance.sdk.openadsdk.TTAdConstant
-import com.bytedance.sdk.openadsdk.TTAdManager
-import io.flutter.embedding.android.FlutterActivity
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.Engine
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.target.Target
+import com.bumptech.glide.request.transition.Transition
+import com.cw.myframework.viewmodel.MainVM
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.*
+import util.QrCodeUtil
+import java.io.File
+
+//import io.flutter.embedding.android.FlutterActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,11 +36,29 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
             //打开一个flutter页面
-            startActivity(FlutterActivity.withNewEngine().initialRoute("/").build(this))
+//            startActivity(FlutterActivity.withNewEngine().initialRoute("/").build(this))
+//            ARouter.getInstance().build("/views/BitmapRegionAct").navigation();
+//            Glide.with(im).asBitmap().load("https://qiniu-app.qtshe.com/123ff.png").into(im)
+            Glide.with(this).load("https://qiniu-app.qtshe.com/123ff.png").into(im)
+//            Glide.with(this).downloadOnly().override(Target.SIZE_ORIGINAL,Target.SIZE_ORIGINAL).load("https://qiniu-app.qtshe.com/123ff.png").into(object:CustomTarget<File>(){
+//                override fun onResourceReady(resource: File, transition: Transition<in File>?) {
+//                     val  thred = Thread.currentThread();
+//                    val ss = resource
+//                    Log.v("---->","finish ${thred}")
+//                    QrCodeUtil.getDecodeAbleBitmap(ss.absolutePath)
+//                    im.setImageBitmap(QrCodeUtil.getDecodeAbleBitmap(ss.absolutePath));
+//                }
+//
+//                override fun onLoadCleared(placeholder: Drawable?) {
+//                    TODO("Not yet implemented")
+//                }
+//
+//            })
 
         }
 
         init()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -41,22 +74,35 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init(){
-        TTAdConfig.Builder()
-            .appId("1111")
-            .useTextureView(true) //使用TextureView控件播放视频,默认为SurfaceView,当有SurfaceView冲突的场景，可以使用TextureView
-            .appName("11111")
-            .titleBarTheme(TTAdConstant.TITLE_BAR_THEME_DARK)
-            .allowShowNotify(true) //是否允许sdk展示通知栏提示
-            .allowShowPageWhenScreenLock(true) //是否在锁屏场景支持展示广告落地页
-            .debug(true) //测试阶段打开，可以通过日志排查问题，上线时去除该调用
-            .directDownloadNetworkType(
-                TTAdConstant.NETWORK_STATE_WIFI,
-                TTAdConstant.NETWORK_STATE_3G
-            ) //允许直接下载的网络状态集合
-            .supportMultiProcess(false) //是否支持多进程
-            .needClearTaskReset()
-            .asyncInit(true) //是否异步初始化sdk,设置为true可以减少SDK初始化耗时
-            //.httpStack(new MyOkStack3())//自定义网络库，demo中给出了okhttp3版本的样例，其余请自行开发或者咨询工作人员。
-            .build()
+//        Log.e("---->","1 ${Thread.currentThread()}")
+//        GlobalScope.launch(Dispatchers.IO){
+//            Log.e("---->","2 ${Thread.currentThread()}")
+//            withContext(Dispatchers.IO) {
+//                //模拟网络获取
+//                Log.e("---->","3 ${Thread.currentThread()}")
+//                Thread.sleep(2000)
+//                Log.e("---->","4 ${Thread.currentThread()}")
+//            }
+//            withContext(Dispatchers.IO) {
+//                //模拟网络获取
+//                Log.e("---->","5 ${Thread.currentThread()}")
+//                Thread.sleep(2000)
+//                Log.e("---->","6 ${Thread.currentThread()}")
+//            }
+//            Log.e("---->","7 ${Thread.currentThread()}")
+//        }
+//        Log.e("---->","8 ${Thread.currentThread()}")
+
+        Log.e("---->","1 ${Thread.currentThread()}")
+//        runBlocking(Dispatchers.IO) {
+//            Log.e("---->","2 ${Thread.currentThread()}")
+//        }
+        GlobalScope.launch(Dispatchers.Main) {
+            Log.e("---->","2 ${Thread.currentThread()}")
+        }
+        Log.e("---->","3 ${Thread.currentThread()}")
+
+        lifecycleScope
     }
+
 }

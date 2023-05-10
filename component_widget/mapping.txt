@@ -1,11 +1,10 @@
 # compiler: R8
 # compiler_version: 2.0.88
-# pg_map_id: b08d9ea
+# pg_map_id: 393f940
 # common_typos_disable
 com.cw.widget.FirstFragment -> com.cw.widget.FirstFragment:
     android.widget.TextView tv -> a
-com.cw.widget.FirstFragment$onViewCreated$1 -> com.cw.widget.FirstFragment$a:
-    com.cw.widget.FirstFragment$onViewCreated$1 INSTANCE -> a
+    void onViewCreated$lambda-0(android.view.View) -> a
 com.nineoldandroids.animation.Animator -> com.nineoldandroids.animation.Animator:
     java.util.ArrayList mListeners -> a
     void addListener(com.nineoldandroids.animation.Animator$AnimatorListener) -> a

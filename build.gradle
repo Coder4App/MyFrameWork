@@ -2,10 +2,10 @@
 println("根build.gradle 开始配置")
 apply from: 'project_config.gradle'
 apply plugin: "com.dorongold.task-tree"
-apply plugin: "com.cw.plugin.taskTree"
-apply plugin: "com.cw.plugin.channelTag"
+//apply plugin: "com.cw.plugin.taskTree"
+//apply plugin: "com.cw.plugin.channelTag"
 buildscript {
-    ext.kotlin_version = "1.4.32"
+    ext.kotlin_version = "1.6.0"
     repositories {
         maven { url "https://plugins.gradle.org/m2/" }
         maven {url 'https://dl.google.com/dl/android/maven2/'}
@@ -17,7 +17,7 @@ buildscript {
         classpath "com.android.tools.build:gradle:4.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "gradle.plugin.com.dorongold.plugins:task-tree:1.5"
-        classpath "com.cw.gradlePlugin:myPlugin:1.0.49"
+//        classpath "com.cw.gradlePlugin:myPlugin:1.0.49"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -28,6 +28,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
 
         //依赖flutter的aar需要添加aar的路径，这里先放在本地，后续可以放在远端的maven中
         maven {
@@ -35,10 +36,6 @@ allprojects {
         }
         maven {
             url "https://storage.flutter-io.cn/download.flutter.io"
-        }
-
-        maven {
-            url 'https://artifact.bytedance.com/repository/pangle'
         }
 
     }
@@ -49,7 +46,7 @@ task clean(type: Delete) {
 }
 
 //flutter开关配置，必须在这个rootProject的ext中添加，这样就可以在别的build.gradle脚本中用 rootProject.ext.flutterLocal 获取配置
-Properties properties = new Properties()
+var properties = new Properties()
 File file = new File("flutter_config.properties")
 if (file.exists()) {
     properties.load(new FileInputStream(file))
