@@ -8,9 +8,9 @@ buildscript {
     ext.kotlin_version = "1.6.0"
     repositories {
         maven { url "https://plugins.gradle.org/m2/" }
-        maven {url 'https://dl.google.com/dl/android/maven2/'}
         maven { url uri('/Users/chenwei/Desktop/localMaven') }
         google()
+        mavenCentral()
         jcenter()
     }
     dependencies {
@@ -26,9 +26,15 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
         maven { url "https://jitpack.io" }
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+
+        google()
+        mavenCentral()
+        jcenter()
 
         //依赖flutter的aar需要添加aar的路径，这里先放在本地，后续可以放在远端的maven中
         maven {
@@ -46,7 +52,7 @@ task clean(type: Delete) {
 }
 
 //flutter开关配置，必须在这个rootProject的ext中添加，这样就可以在别的build.gradle脚本中用 rootProject.ext.flutterLocal 获取配置
-var properties = new Properties()
+Properties properties = new Properties()
 File file = new File("flutter_config.properties")
 if (file.exists()) {
     properties.load(new FileInputStream(file))

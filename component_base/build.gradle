@@ -36,10 +36,9 @@ android {
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.1.0'
 
+    api rootProject.ext.libs["androidX"]
+//    api rootProject.ext.libs["recyclerview-v7"]
     api rootProject.ext.libs["lifecycle-runtime"]
     api rootProject.ext.libs["lifecycle-livedata-ktx"]
     api rootProject.ext.libs["lifecycle-viewmodel-ktx"]
@@ -48,8 +47,8 @@ dependencies {
     //引入ARouter路由框架
     api rootProject.ext.libs["arouter-api"]
     api rootProject.ext.libs["background-core"]
-
     api rootProject.ext.libs["zxing"]
+    api rootProject.ext.libs["recyclerview"]
 
     //flutter源码依赖配置
 //    if (rootProject.ext.flutterLocal){
